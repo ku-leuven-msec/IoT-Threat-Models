@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spartamodel:DFDModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:spartamodel="http://distrinet.cs.kuleuven.be/spartamodel" xmi:id="_tXDB0Oe0Ee-D4sE8jd2i8Q" name="Edge network">
+  <containedElements xsi:type="spartamodel:ExternalEntity" xmi:id="_tXDB0ee0Ee-D4sE8jd2i8Q" name="User" send="_tXDB3Oe0Ee-D4sE8jd2i8Q _tXDB3ee0Ee-D4sE8jd2i8Q _tXDB4Oe0Ee-D4sE8jd2i8Q" receive="_tXDB2-e0Ee-D4sE8jd2i8Q _tXDB3ue0Ee-D4sE8jd2i8Q _tXDB3-e0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:TrustBoundaryContainer" xmi:id="_tXDB0ue0Ee-D4sE8jd2i8Q" name="Home">
+    <containedElements xsi:type="spartamodel:Process" xmi:id="_tXDB0-e0Ee-D4sE8jd2i8Q" name="IoT" send="_tXDB1ee0Ee-D4sE8jd2i8Q _tXDB3-e0Ee-D4sE8jd2i8Q" receive="_tXDB1ue0Ee-D4sE8jd2i8Q _tXDB3ee0Ee-D4sE8jd2i8Q"/>
+    <containedElements xsi:type="spartamodel:Process" xmi:id="_tXDB1Oe0Ee-D4sE8jd2i8Q" name="Gateway" send="_tXDB1ue0Ee-D4sE8jd2i8Q _tXDB2ee0Ee-D4sE8jd2i8Q _tXDB3ue0Ee-D4sE8jd2i8Q" receive="_tXDB1ee0Ee-D4sE8jd2i8Q _tXDB2ue0Ee-D4sE8jd2i8Q _tXDB4Oe0Ee-D4sE8jd2i8Q"/>
+    <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB1ee0Ee-D4sE8jd2i8Q" name="Flow 1" sender="_tXDB0-e0Ee-D4sE8jd2i8Q" recipient="_tXDB1Oe0Ee-D4sE8jd2i8Q"/>
+    <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB1ue0Ee-D4sE8jd2i8Q" name="Flow 2" sender="_tXDB1Oe0Ee-D4sE8jd2i8Q" recipient="_tXDB0-e0Ee-D4sE8jd2i8Q"/>
+  </containedElements>
+  <containedElements xsi:type="spartamodel:TrustBoundaryContainer" xmi:id="_tXDB1-e0Ee-D4sE8jd2i8Q" name="Cloud">
+    <containedElements xsi:type="spartamodel:ExternalEntity" xmi:id="_tXDB2Oe0Ee-D4sE8jd2i8Q" name="Cloud" send="_tXDB2ue0Ee-D4sE8jd2i8Q _tXDB2-e0Ee-D4sE8jd2i8Q" receive="_tXDB2ee0Ee-D4sE8jd2i8Q _tXDB3Oe0Ee-D4sE8jd2i8Q"/>
+  </containedElements>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB2ee0Ee-D4sE8jd2i8Q" name="Flow 3" sender="_tXDB1Oe0Ee-D4sE8jd2i8Q" recipient="_tXDB2Oe0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB2ue0Ee-D4sE8jd2i8Q" name="Flow 4" sender="_tXDB2Oe0Ee-D4sE8jd2i8Q" recipient="_tXDB1Oe0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB2-e0Ee-D4sE8jd2i8Q" name="Flow 5" sender="_tXDB2Oe0Ee-D4sE8jd2i8Q" recipient="_tXDB0ee0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB3Oe0Ee-D4sE8jd2i8Q" name="Flow 6" sender="_tXDB0ee0Ee-D4sE8jd2i8Q" recipient="_tXDB2Oe0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB3ee0Ee-D4sE8jd2i8Q" name="Flow 7" sender="_tXDB0ee0Ee-D4sE8jd2i8Q" recipient="_tXDB0-e0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB3ue0Ee-D4sE8jd2i8Q" name="Flow 8" sender="_tXDB1Oe0Ee-D4sE8jd2i8Q" recipient="_tXDB0ee0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB3-e0Ee-D4sE8jd2i8Q" name="Flow 9" sender="_tXDB0-e0Ee-D4sE8jd2i8Q" recipient="_tXDB0ee0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_tXDB4Oe0Ee-D4sE8jd2i8Q" name="Flow 10" sender="_tXDB0ee0Ee-D4sE8jd2i8Q" recipient="_tXDB1Oe0Ee-D4sE8jd2i8Q"/>
+  <resource xsi:type="spartamodel:ThreatTypeCatalog" href="stride-per-interaction.sparta#_Q9BR4Nx-Ee6qA9No-hJ8dg"/>
+</spartamodel:DFDModel>

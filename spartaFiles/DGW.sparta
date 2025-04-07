@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spartamodel:DFDModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:spartamodel="http://distrinet.cs.kuleuven.be/spartamodel" xmi:id="_10hqMAo_EfC3ycKieHz9aw" name="DFD for concumer-IoT applications using dedicated gateways">
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_-MFLAAo_EfC3ycKieHz9aw" name="c1a" sender="_4pVUIAo_EfC3ycKieHz9aw" recipient="_6gXHMAo_EfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="__8WOwAo_EfC3ycKieHz9aw" name="c1b" sender="_6gXHMAo_EfC3ycKieHz9aw" recipient="_4pVUIAo_EfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_H0aXMApAEfC3ycKieHz9aw" name="c6a" sender="_6gXHMAo_EfC3ycKieHz9aw" recipient="_GR1xMApAEfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_I-HxQApAEfC3ycKieHz9aw" name="c6b" sender="_GR1xMApAEfC3ycKieHz9aw" recipient="_6gXHMAo_EfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:ExternalEntity" xmi:id="_L2IgMApAEfC3ycKieHz9aw" name="Cloud user" send="_Rfi_wApAEfC3ycKieHz9aw" receive="_N9GMsApAEfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_N9GMsApAEfC3ycKieHz9aw" name="cloud-response" sender="_GR1xMApAEfC3ycKieHz9aw" recipient="_L2IgMApAEfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_Rfi_wApAEfC3ycKieHz9aw" name="cloud-request" sender="_L2IgMApAEfC3ycKieHz9aw" recipient="_GR1xMApAEfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:TrustBoundaryContainer" xmi:id="_iPOpIApAEfC3ycKieHz9aw" name="Cloud">
+    <containedElements xsi:type="spartamodel:Process" xmi:id="_GR1xMApAEfC3ycKieHz9aw" name="Cloud" send="_I-HxQApAEfC3ycKieHz9aw _N9GMsApAEfC3ycKieHz9aw" receive="_H0aXMApAEfC3ycKieHz9aw _Rfi_wApAEfC3ycKieHz9aw"/>
+  </containedElements>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_uYW-IApAEfC3ycKieHz9aw" name="local-request" sender="_vfeugApREfCOcbF-4Lqurw" recipient="_6gXHMAo_EfC3ycKieHz9aw"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_zb6-oApAEfC3ycKieHz9aw" name="local-response" sender="_6gXHMAo_EfC3ycKieHz9aw" recipient="_vfeugApREfCOcbF-4Lqurw"/>
+  <containedElements xsi:type="spartamodel:TrustBoundaryContainer" xmi:id="_pkjBIApREfCOcbF-4Lqurw" name="Home network">
+    <containedElements xsi:type="spartamodel:TrustBoundaryContainer" xmi:id="_Z91asApAEfC3ycKieHz9aw" name="Dedicated network">
+      <containedElements xsi:type="spartamodel:Process" xmi:id="_4pVUIAo_EfC3ycKieHz9aw" name="IoT Device" send="_-MFLAAo_EfC3ycKieHz9aw" receive="__8WOwAo_EfC3ycKieHz9aw"/>
+      <containedElements xsi:type="spartamodel:Process" xmi:id="_6gXHMAo_EfC3ycKieHz9aw" name="Dedicated Gateway" send="__8WOwAo_EfC3ycKieHz9aw _H0aXMApAEfC3ycKieHz9aw _zb6-oApAEfC3ycKieHz9aw" receive="_-MFLAAo_EfC3ycKieHz9aw _I-HxQApAEfC3ycKieHz9aw _uYW-IApAEfC3ycKieHz9aw"/>
+    </containedElements>
+    <containedElements xsi:type="spartamodel:ExternalEntity" xmi:id="_vfeugApREfCOcbF-4Lqurw" name="Local user" send="_uYW-IApAEfC3ycKieHz9aw" receive="_zb6-oApAEfC3ycKieHz9aw"/>
+  </containedElements>
+  <resource xsi:type="spartamodel:ThreatTypeCatalog" href="stride-per-interaction.sparta#_Q9BR4Nx-Ee6qA9No-hJ8dg"/>
+</spartamodel:DFDModel>

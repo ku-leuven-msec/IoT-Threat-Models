@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spartamodel:ThreatTypeCatalog xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:spartamodel="http://distrinet.cs.kuleuven.be/spartamodel" xmi:id="_Q9BR4Nx-Ee6qA9No-hJ8dg" name="STRIDE-per-interaction" package="stride">
+  <threat xsi:type="spartamodel:ThreatType" xmi:id="_LyrzoNyBEe6pbYxqOy7ZmA" name="Spoofing">
+    <threatpattern xmi:id="_NFWVYNyBEe6pbYxqOy7ZmA" name="Spoofing pattern">
+      <patterns>pattern spoofing(threatened : DFDElement, df : DataFlow) {&#xD;
+  find processToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToDataStoreComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToExternalEntityComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(threatened, _, df);&#xD;
+} or {&#xD;
+  find processToExternalEntityComm(_, threatened, df);&#xD;
+}</patterns>
+    </threatpattern>
+  </threat>
+  <threat xsi:type="spartamodel:ThreatType" xmi:id="_R0SwwNyBEe6pbYxqOy7ZmA" name="Tampering">
+    <threatpattern xmi:id="_XeWwkNyBEe6pbYxqOy7ZmA" name="Tampering pattern">
+      <patterns>pattern tampering(threatened : DFDElement, df : DataFlow) {&#xD;
+  find processToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find processToDataStoreComm(_, threatened, df);&#xD;
+} or {&#xD;
+  threatened == df;&#xD;
+}</patterns>
+    </threatpattern>
+  </threat>
+  <threat xsi:type="spartamodel:ThreatType" xmi:id="_SIb0wNyBEe6pbYxqOy7ZmA" name="Repudiation" enabled="false">
+    <threatpattern xmi:id="_aC8NMNyBEe6pbYxqOy7ZmA" name="Repudiation pattern">
+      <patterns>pattern repudiation(threatened : DFDElement, df : DataFlow) {&#xD;
+  find processToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToExternalEntityComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToDataStoreComm(_, threatened, df);&#xD;
+}</patterns>
+    </threatpattern>
+  </threat>
+  <threat xsi:type="spartamodel:ThreatType" xmi:id="_SZIjMNyBEe6pbYxqOy7ZmA" name="Information Disclosure">
+    <threatpattern xmi:id="_dCuYENyBEe6pbYxqOy7ZmA" name="Information disclosure pattern">
+      <patterns>pattern informationDisclosure(threatened : DFDElement, df : DataFlow) {&#xD;
+  find processToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToDataStoreComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToExternalEntityComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToDataStoreComm(_, threatened, df);&#xD;
+} or {&#xD;
+  threatened == df;&#xD;
+}</patterns>
+    </threatpattern>
+  </threat>
+  <threat xsi:type="spartamodel:ThreatType" xmi:id="_Sn1tkNyBEe6pbYxqOy7ZmA" name="Denial of Service">
+    <threatpattern xmi:id="_dXnqANyBEe6pbYxqOy7ZmA" name="Denial of service pattern">
+      <patterns>pattern denialOfService(threatened : DFDElement, df : DataFlow) {&#xD;
+  find processToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToExternalEntityComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(threatened, _ , df);&#xD;
+} or {&#xD;
+  find processToDataStoreComm(_, threatened, df);&#xD;
+} or {&#xD;
+  threatened == df;&#xD;
+}</patterns>
+    </threatpattern>
+  </threat>
+  <threat xsi:type="spartamodel:ThreatType" xmi:id="_S6UksNyBEe6pbYxqOy7ZmA" name="Elevation of Privilege">
+    <threatpattern xmi:id="_dqHIMNyBEe6pbYxqOy7ZmA" name="Elevation of privilege pattern">
+      <patterns>pattern elevationOfPrivilege(threatened : DFDElement, df : DataFlow) {&#xD;
+  find processToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find dataStoreToProcessComm(_, threatened, df);&#xD;
+} or {&#xD;
+  find externalEntityToProcessComm(_, threatened, df);&#xD;
+}</patterns>
+    </threatpattern>
+  </threat>
+  <imports>import &quot;http://distrinet.cs.kuleuven.be/spartamodel&quot;</imports>
+  <imports>import &quot;http://www.eclipse.org/emf/2002/Ecore&quot;</imports>
+  <helperPatterns>pattern senderSpecification(spec : SenderSpecifiable, specifiedBy : SenderSpecification) {&#xD;
+   SenderSpecifiable.senderSpecifiedBy(spec, specifiedBy);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern recipientSpecification(spec : RecipientSpecifiable, specifiedBy : RecipientSpecification) {&#xD;
+   RecipientSpecifiable.recipientSpecifiedBy(spec, specifiedBy);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern actualRecipient(spec : RecipientSpecifiable, recipient : DataFlowEntity) {&#xD;
+  neg find recipientSpecification(spec, _);&#xD;
+  RecipientSpecifiable.recipient(spec, recipient);&#xD;
+} or {&#xD;
+  RecipientSpecifiable.recipientSpecifiedBy(spec, next);&#xD;
+  find actualRecipient(next, recipient);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern actualSender(spec : SenderSpecifiable, sender : DataFlowEntity) {&#xD;
+  neg find senderSpecification(spec, _);&#xD;
+  SenderSpecifiable.sender(spec, sender);&#xD;
+} or {&#xD;
+  SenderSpecifiable.senderSpecifiedBy(spec, next);&#xD;
+  find actualSender(next, sender);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern flowComm(threatened : DataFlow, p : DataFlowEntity, p2 : DataFlowEntity) { &#xD;
+	DataFlow(threatened);DataFlowEntity(p);DataFlowEntity(p2);&#xD;
+	find Communication(p,threatened,p2);&#xD;
+} </helperPatterns>
+  <helperPatterns>pattern processToProcessComm(threatened : Process, p2 : Process, df : DataFlow) {&#xD;
+	Process(threatened);	Process(p2);	DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern processToExternalEntityComm(threatened : Process, p2 : ExternalEntity, df : DataFlow) {&#xD;
+	Process(threatened); ExternalEntity(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern processToDataStoreComm(threatened : Process, p2 : DataStore, df : DataFlow) {&#xD;
+	Process(threatened); DataStore(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern dataStoreToProcessComm(threatened : DataStore, p2 : Process, df : DataFlow) {&#xD;
+	DataStore(threatened); Process(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern dataStoreToDataStoreComm(threatened : DataStore, p2 : DataStore, df : DataFlow) {&#xD;
+	DataStore(threatened); DataStore(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern dataStoreToExternalEntityComm(threatened : DataStore, p2 : ExternalEntity, df : DataFlow) {&#xD;
+	DataStore(threatened); ExternalEntity(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern externalEntityToProcessComm(threatened : ExternalEntity, p2 : Process, df : DataFlow) {&#xD;
+	ExternalEntity(threatened); Process(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern externalEntityToDataStoreComm(threatened : ExternalEntity, p2 : DataStore, df : DataFlow) {&#xD;
+	ExternalEntity(threatened); DataStore(p2); DataFlow(df);	&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern externalEntityToExternalEntityComm(threatened : ExternalEntity, p2 : ExternalEntity, df : DataFlow) {&#xD;
+	ExternalEntity(threatened); ExternalEntity(p2); DataFlow(df);	&#xD;
+	find Communication(threatened,df,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern flowThroughComm(threatened : DataFlow, p : DataFlowEntity, p2 : DataFlowEntity) {&#xD;
+	DataFlow(threatened);DataFlowEntity(p);DataFlowEntity(p2);&#xD;
+	find Communication(p,threatened,p2);&#xD;
+	find containerDiff(p,p2);&#xD;
+} </helperPatterns>
+  <helperPatterns>pattern processThroughProcessComm(threatened : Process, p2 : Process, df : DataFlow) {&#xD;
+	Process(threatened);	Process(p2);	DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern processThroughExternalEntityComm(threatened : Process, p2 : ExternalEntity, df : DataFlow) {&#xD;
+	Process(threatened); ExternalEntity(p2); DataFlow(df);	&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern processThroughDataStoreComm(threatened : Process, p2 : DataStore, df : DataFlow) {&#xD;
+	Process(threatened); DataStore(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern dataStoreThroughProcessComm(threatened : DataStore, p2 : Process, df : DataFlow) { &#xD;
+	DataStore(threatened); Process(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern dataStoreThroughDataStoreComm(threatened : DataStore, p2 : DataStore, df : DataFlow) {&#xD;
+	DataStore(threatened); DataStore(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern dataStoreThroughExternalEntityComm(threatened : DataStore, p2 : ExternalEntity, df : DataFlow) {&#xD;
+	DataStore(threatened); ExternalEntity(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern externalEntityThroughProcessComm(threatened : ExternalEntity, p2 : Process, df : DataFlow) {&#xD;
+	ExternalEntity(threatened); Process(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern externalEntityThroughDataStoreComm(threatened : ExternalEntity, p2 : DataStore, df : DataFlow) {&#xD;
+	ExternalEntity(threatened); DataStore(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern externalEntityThroughExternalEntityComm(threatened : ExternalEntity, p2 : ExternalEntity, df : DataFlow) {&#xD;
+	ExternalEntity(threatened); ExternalEntity(p2); DataFlow(df);&#xD;
+	find Communication(threatened,df,p2);&#xD;
+	find containerDiff(threatened,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern flowThroughElementComm(threatened : DataFlow, p : DataFlowEntity, p2 : DataFlowEntity) {&#xD;
+	Process(p);&#xD;
+	Process(p2);&#xD;
+	find Communication(p,threatened,p2);&#xD;
+	find containerDiff(p,p2);&#xD;
+} or {&#xD;
+	Process(p);&#xD;
+	DataStore(p2);&#xD;
+	find Communication(p,threatened,p2);&#xD;
+	find containerDiff(p,p2);&#xD;
+} or {&#xD;
+	ExternalEntity(p);&#xD;
+	Process(p2);&#xD;
+	find Communication(p,threatened,p2);&#xD;
+	find containerDiff(p,p2);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern containerDiff(sender: DataFlowEntity, recipient : DataFlowEntity) {&#xD;
+	DataFlowEntity(sender); DataFlowEntity(recipient);&#xD;
+	find Communication(sender, _df, recipient);&#xD;
+	TrustBoundaryContainer(contain);&#xD;
+	find contains(contain,sender);&#xD;
+	neg find contains(contain,recipient);&#xD;
+} or {&#xD;
+	DataFlowEntity(sender); DataFlowEntity(recipient);&#xD;
+	find Communication(sender, _df2, recipient);&#xD;
+	TrustBoundaryContainer(contain);&#xD;
+	find contains(contain,recipient);&#xD;
+	neg find contains(contain,sender);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern contains(outer : DFDContainer, inner : DFDContainer) {&#xD;
+	DFDContainer(outer);&#xD;
+	find containment+(outer,inner);&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern containment(outer : DFDContainer, inner : DFDContainer) {&#xD;
+	DFDContainer.containedElements(outer, inner);&#xD;
+} or {&#xD;
+	DFDElement(inner);&#xD;
+	outer == inner;&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern sendSpecReachable(spec: SenderSpecifiable, next: SenderSpecifiable) {&#xD;
+	SenderSpecification(spec);&#xD;
+	SenderSpecification.specifiesSenderOf(spec, next);&#xD;
+} or {&#xD;
+	DataFlow(spec);&#xD;
+	spec == next;&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern receiveSpecReachable(spec: RecipientSpecifiable, next: RecipientSpecifiable) {&#xD;
+	RecipientSpecification(spec);&#xD;
+	RecipientSpecification.specifiesRecipientOf(spec, next);&#xD;
+} or {&#xD;
+	DataFlow(spec);&#xD;
+	spec == next;&#xD;
+}</helperPatterns>
+  <helperPatterns>pattern Communication(&#xD;
+	sender : DataFlowEntity, &#xD;
+	flow: DataFlow, &#xD;
+	recipient : DataFlowEntity&#xD;
+) {&#xD;
+	find actualSender(flow, sender);&#xD;
+        find actualRecipient(flow, recipient);&#xD;
+}</helperPatterns>
+</spartamodel:ThreatTypeCatalog>

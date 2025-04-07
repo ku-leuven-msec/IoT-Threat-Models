@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spartamodel:DFDModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:spartamodel="http://distrinet.cs.kuleuven.be/spartamodel" xmi:id="_oqAq8Oe0Ee-D4sE8jd2i8Q">
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_oqAq8ee0Ee-D4sE8jd2i8Q" name="user-response" sender="_oqAq8-e0Ee-D4sE8jd2i8Q" recipient="_oqAq9Oe0Ee-D4sE8jd2i8Q">
+    <lossMagnitude xmi:id="_nvyPEPOAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+      <key href="stride-per-interaction.sparta#_SZIjMNyBEe6pbYxqOy7ZmA"/>
+    </lossMagnitude>
+    <lossMagnitude xmi:id="_qGhc8POAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+      <key href="stride-per-interaction.sparta#_R0SwwNyBEe6pbYxqOy7ZmA"/>
+    </lossMagnitude>
+    <lossMagnitude xmi:id="_sPTuYPOAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+      <key href="stride-per-interaction.sparta#_Sn1tkNyBEe6pbYxqOy7ZmA"/>
+    </lossMagnitude>
+    <estimates xmi:id="_lQfiIPOAEe-KtOqUhubRnQ" probable="0.5" maximum="1.0" confidence="4.0" name="Low"/>
+    <estimates xmi:id="_hnKrAPOAEe-KtOqUhubRnQ" minimum="5.0" probable="7.5" maximum="10.0" confidence="4.0" name="High"/>
+  </containedElements>
+  <containedElements xsi:type="spartamodel:TrustBoundaryContainer" xmi:id="_oqAq8ue0Ee-D4sE8jd2i8Q" name="N1">
+    <containedElements xsi:type="spartamodel:Process" xmi:id="_oqAq8-e0Ee-D4sE8jd2i8Q" name="IoT" send="_oqAq8ee0Ee-D4sE8jd2i8Q" receive="_zMexUPN_Ee-KtOqUhubRnQ">
+      <lossMagnitude xmi:id="_wi_KEPOAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+        <key href="stride-per-interaction.sparta#_Sn1tkNyBEe6pbYxqOy7ZmA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_yUHJcPOAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+        <key href="stride-per-interaction.sparta#_SZIjMNyBEe6pbYxqOy7ZmA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_zYn6cPOAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+        <key href="stride-per-interaction.sparta#_R0SwwNyBEe6pbYxqOy7ZmA"/>
+      </lossMagnitude>
+    </containedElements>
+  </containedElements>
+  <containedElements xsi:type="spartamodel:ExternalEntity" xmi:id="_oqAq9Oe0Ee-D4sE8jd2i8Q" name="User" send="_zMexUPN_Ee-KtOqUhubRnQ" receive="_oqAq8ee0Ee-D4sE8jd2i8Q"/>
+  <containedElements xsi:type="spartamodel:DataFlow" xmi:id="_zMexUPN_Ee-KtOqUhubRnQ" name="user-request" sender="_oqAq9Oe0Ee-D4sE8jd2i8Q" recipient="_oqAq8-e0Ee-D4sE8jd2i8Q">
+    <lossMagnitude xmi:id="_2P97APOAEe-KtOqUhubRnQ" value="_hnKrAPOAEe-KtOqUhubRnQ">
+      <key href="stride-per-interaction.sparta#_Sn1tkNyBEe6pbYxqOy7ZmA"/>
+    </lossMagnitude>
+  </containedElements>
+  <resource xsi:type="spartamodel:ThreatTypeCatalog" href="stride-per-interaction.sparta#_Q9BR4Nx-Ee6qA9No-hJ8dg"/>
+</spartamodel:DFDModel>
