@@ -19,7 +19,7 @@ This model uses shared or general-purpose gateways instead,  IoT devices connect
 
 
 
-![No-DGW Model](./no_DGW.png)
+![No-DGW Model](./no-DGW.png)
 
 ---
 
