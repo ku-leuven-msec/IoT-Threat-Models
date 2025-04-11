@@ -19,7 +19,7 @@ This model uses shared or general-purpose gateways instead,  IoT devices connect
 
 
 
-![Cloud/LAN Threat Model](./no_DGW.png)
+![Cloud/LAN Threat Model](./no-DGW.png)
 
 ---
 
